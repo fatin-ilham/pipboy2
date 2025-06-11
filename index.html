@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mini Pip-Boy Arcade </title>
-  <link rel="stylesheet" href="main.css"/>
+  <title>Mini Pip-Boy Arcade</title>
+  
+  <!-- Fallout style -->
+  <link rel="stylesheet" href="main.css" />
+  
+  <!-- Snake and other game logic -->
   <script src="main.js" defer></script>
+  <script src="snake.js" defer></script>
 </head>
 <body>
   <div class="pipboy-screen">
     <h1 class="terminal-text">MINI PIP-BOY ARCADE - - HAVE FUN PLAYING THE BEST! - FATIN ILHAM</h1>
+    
     <div class="menu">
-      <button onclick="loadGame('snake')">Play Snake</button>
-      <button onclick="loadGame('tetris')">Play Tetris</button>
+      <button onclick="loadGame('snake')">▶️ Play Snake</button>
+      <button onclick="loadGame('tetris')">▶️ Play Tetris</button>
     </div>
+
+    <!-- Where the canvas game will be injected -->
     <div id="game-area"></div>
   </div>
 </body>
