@@ -1,4 +1,4 @@
-// Create canvas only if it doesn't exist
+
 if (!document.getElementById("snakeCanvas")) {
   const canvas = document.createElement("canvas");
   canvas.id = "snakeCanvas";
@@ -47,24 +47,24 @@ function runSnakeGame() {
     ctx.fillStyle = "#000";
     ctx.fillRect(0, 0, 400, 400);
 
-    // Snake body
+
     for (let i = 0; i < snake.length; i++) {
       ctx.fillStyle = i === 0 ? "#0f0" : "#090";
       ctx.fillRect(snake[i].x, snake[i].y, box, box);
     }
 
-    // Food
+
     ctx.fillStyle = "#f00";
     ctx.fillRect(food.x, food.y, box, box);
 
-    // Move snake
+
     let head = { ...snake[0] };
     if (direction === "LEFT") head.x -= box;
     if (direction === "RIGHT") head.x += box;
     if (direction === "UP") head.y -= box;
     if (direction === "DOWN") head.y += box;
 
-    // Game over check
+
     if (
       head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400 ||
       snake.some((segment) => segment.x === head.x && segment.y === head.y)
@@ -76,7 +76,7 @@ function runSnakeGame() {
 
     snake.unshift(head);
 
-    // Food eaten?
+
     if (head.x === food.x && head.y === food.y) {
       food = {
         x: Math.floor(Math.random() * 20) * box,
