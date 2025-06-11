@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'PipBoy';
-  src: url('Pip-Boy.otf') format('opentype'); /* or .otf if you use that */
+  src: url('Pip-Boy.otf') format('opentype'); 
 }
 
 body {
